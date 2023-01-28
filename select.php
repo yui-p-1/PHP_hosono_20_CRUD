@@ -54,6 +54,10 @@ if($status==false) {
     $view .= '<a href="detail.php?id=' . $result['id'] . '">';
     // $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result["book_URL"]." | ".$result["book_comment"];
     $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result_URL." | ".$result["book_comment"];
+    $view .= '</a>';
+    $view .= '<a href="delete.php?id=' . $result['id'] . '">';//追記
+    $view .= '  [削除]';//追記
+    $view .= '</a>';//追記
     $view .="</p>";
   }
 }

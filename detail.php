@@ -41,13 +41,14 @@ if ($status == false) {
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="POST" action="insert_direct.php">
+<form method="POST" action="update.php">
   <div class="jumbotron">
    <fieldset>
     <legend>フリーアンケート</legend>
      <label>書籍名：<input type="text" name="book_name" value="<?= $result["book_name"] ?>"></label><br>
      <label>書籍URL：<input type="text" name="book_URL" value="<?= $result["book_URL"] ?>"></label><br>
      <label>書籍コメント：<textArea name="book_comment" rows="4" cols="40"><?= $result["book_comment"] ?></textArea></label><br>
+     <input type="hidden" name="id" value="<?= $result['id'] ?>">
      <input type="submit" value="送信">
     </fieldset>
   </div>
