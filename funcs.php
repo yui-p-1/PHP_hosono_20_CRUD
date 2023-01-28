@@ -22,4 +22,9 @@ function db_conn(){
     }
 }
 
+//リダイレクト関数: redirect($file_name)
+function redirect($file_name){
+    header('Location: '.$file_name);
+}
+
 ?>
