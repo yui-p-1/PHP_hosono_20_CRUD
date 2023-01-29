@@ -52,7 +52,6 @@ if($status==false) {
 
     $view .="<p>";
     $view .= '<a href="detail.php?id=' . $result['id'] . '">';
-    // $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result["book_URL"]." | ".$result["book_comment"];
     $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result_URL." | ".$result["book_comment"];
     $view .= '</a>';
     $view .= '<a href="delete.php?id=' . $result['id'] . '">';//追記
@@ -67,6 +66,7 @@ if($status==false) {
 ?>
 
 <!-- Main[Start] -->
+<div style="display:inline-flex">
 <form method="post" action="">
 <input type="submit" name="sort_name" value="書籍名順">
 </form>
@@ -74,6 +74,7 @@ if($status==false) {
 <form method="post" action="management.php">
 <input type="submit" name="user_name" value="User管理画面">
 </form>
+</div>
 
 
 <?php
@@ -107,7 +108,6 @@ if($status==false) {
     $result_URL = mb_ereg_replace($pattern, $replacement, htmlspecialchars($result_URL));
 
     $view .="<p>";
-    // $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result["book_URL"]." | ".$result["book_comment"];
     $view .=$result["registered_date"]." | ".$result["book_name"]." | ".$result_URL." | ".$result["book_comment"];
     $view .="</p>"; 
   }

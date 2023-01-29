@@ -21,3 +21,6 @@ if ($status == false) {
     redirect('select.php');
 }
 ?>
+
+<!-- 残課題：management画面で削除したときに、select画面に戻ってしまう。
+management画面にする処理を加えたい。 -->

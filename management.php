@@ -45,7 +45,10 @@ if($status==false) {
   //FETCH_ASSOC=http://php.net/manual/ja/pdostatement.fetch.php
   while( $result = $stmt->fetch(PDO::FETCH_ASSOC)){
     $view .="<p>";
-    $view .=$result["registered_date"]." | ".$result["id"];
+
+    //チャレンジ
+    $view .= '<a href="user_register.php?id=' . $result['id'] . '">';
+    $view .=$result["registered_date"]." | ".$result['id'];
     $view .= '</a>';
     $view .= '<a href="delete.php?id=' . $result['id'] . '">';
     $view .= '  [削除]';
