@@ -71,6 +71,10 @@ if($status==false) {
 <input type="submit" name="sort_name" value="書籍名順">
 </form>
 
+<form method="post" action="management.php">
+<input type="submit" name="user_name" value="User管理画面">
+</form>
+
 
 <?php
 $sort_name = filter_input(INPUT_POST, 'sort_name');
