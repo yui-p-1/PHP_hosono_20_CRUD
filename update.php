@@ -12,9 +12,9 @@ $pdo = db_conn();
 //３．データ登録SQL作成
 $stmt = $pdo->prepare( "UPDATE gs_bm_table SET book_name = :book_name, book_URL = :book_URL, book_comment = :book_comment, registered_date = sysdate() WHERE id = :id;" );
 
-$stmt->bindValue(':book_name', $book_name, PDO::PARAM_STR);/// 文字の場合 PDO::PARAM_STR
-$stmt->bindValue(':book_URL', $book_URL, PDO::PARAM_STR);// 文字の場合 PDO::PARAM_STR
-$stmt->bindValue(':book_comment', $book_comment, PDO::PARAM_STR);// 文字の場合 PDO::PARAM_STR
+$stmt->bindValue(':book_name', $book_name, PDO::PARAM_STR);// 文字の場合 PDO::PARAM_STR
+$stmt->bindValue(':book_URL', $book_URL, PDO::PARAM_STR);
+$stmt->bindValue(':book_comment', $book_comment, PDO::PARAM_STR);
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);// 数値の場合 PDO::PARAM_INT
 $status = $stmt->execute(); //実行
 

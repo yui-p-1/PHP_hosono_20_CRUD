@@ -48,7 +48,7 @@ if($status==false) {
 
     //チャレンジ
     $view .= '<a href="user_register.php?id=' . $result['id'] . '">';
-    $view .=$result["registered_date"]." | ".$result['id'];
+    $view .=$result["registered_date"]." | ".$result['id']." | ".$result["user_name"];
     $view .= '</a>';
     $view .= '<a href="delete.php?id=' . $result['id'] . '">';
     $view .= '  [削除]';

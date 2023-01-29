@@ -34,7 +34,7 @@ if ($status == false) {
 <header>
   <nav class="navbar navbar-default" style="background-color:gray">
     <div class="container-fluid">
-    <div class="navbar-header"><a class="navbar-brand" href="select.php">user register</a></div>
+    <div class="navbar-header"><a class="navbar-brand" href="management.php">user register</a></div>
     <!-- hrefの部分、要検討 -->
     </div>
   </nav>
@@ -42,7 +42,7 @@ if ($status == false) {
 <!-- Head[End] -->
 
 <!-- Main[Start] -->
-<form method="POST" action="">
+<form method="POST" action="insert_user.php">
   <div class="jumbotron">
    <fieldset>
     <legend>ユーザー登録</legend>
