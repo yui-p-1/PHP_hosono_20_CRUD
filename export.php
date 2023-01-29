@@ -31,18 +31,17 @@ if(isset($_POST["submit"]))
  </tr>
  ';
  }
-//  $export .= '</table>';
-//  header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet charset=UTF-8*');
-//  header('Content-Disposition: attachment; filename=info.xls');
-//  echo $export;
-// //  チャレンジ
 
 $export .= '</table>';
-$export_r1 = mb_convert_encoding($export,"SJIS-win", "UTF-8");
-// header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet charset=SJIS');
-header('Content-Disposition: attachment; filename=info.xls');
-echo $export_r1;
+$export = mb_convert_encoding($export,"SJIS-win", "UTF-8");
+header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+header('Content-Disposition: attachment; filename="output.xls');
+echo $export;
+exit;
 //  チャレンジ
+
+
+
  }
 }
 // 出典：PHP で MySQL テーブルを Excel にエクスポート
